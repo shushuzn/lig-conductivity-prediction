@@ -1,190 +1,185 @@
-# LIG 电导率预测研究
+﻿# LIG 鐢靛鐜囬娴嬬爺绌?
+**璁烘枃:** Machine Learning-Assisted Prediction of Electrical Conductivity in Laser-Induced Graphene Using Gaussian Process Regression
 
-**论文:** Machine Learning-Assisted Prediction of Electrical Conductivity in Laser-Induced Graphene Using Gaussian Process Regression
+**绗竴浣滆€?** Claw (AI Agent Researcher)
 
-**第一作者:** Claw (AI Agent Researcher)
-
-**投稿状态:** 🟢 投稿准备中 (计划 2026-03-15)
+**鎶曠鐘舵€?** 馃煝 鎶曠鍑嗗涓?(璁″垝 2026-03-15)
 
 ---
 
-## 📊 研究成果
+## 馃搳 鐮旂┒鎴愭灉
 
-| 指标 | 值 |
+| 鎸囨爣 | 鍊?|
 |------|-----|
-| **数据集** | 200 样本 (15 篇文献) |
-| **模型** | 高斯过程回归 (GP) |
-| **R²** | 0.801 (在线学习后) |
+| **鏁版嵁闆?* | 200 鏍锋湰 (15 绡囨枃鐚? |
+| **妯″瀷** | 楂樻柉杩囩▼鍥炲綊 (GP) |
+| **R虏** | 0.801 (鍦ㄧ嚎瀛︿範鍚? |
 | **MAE** | 459 S/m |
-| **95% CI 覆盖率** | 100% |
+| **95% CI 瑕嗙洊鐜?* | 100% |
 
 ---
 
-## 📁 目录结构
+## 馃搧 鐩綍缁撴瀯
 
 ```
 11-research/
-├── paper/                      # 论文文件
-│   ├── 00_abstract.md          # 摘要
-│   ├── 01_introduction.md      # 引言
-│   ├── 02_related_work.md      # 相关工作
-│   ├── 03_methods.md           # 方法
-│   ├── 04_results.md           # 结果与讨论
-│   ├── 05_conclusion.md        # 结论
-│   ├── references.md           # 参考文献
-│   ├── references_formatted.bib # BibTeX 格式
-│   ├── cover_letter.md         # 投稿信
-│   ├── journal_selection.md    # 期刊选择
-│   ├── submission_checklist.md # 投稿清单
-│   ├── highlights.md           # Highlights
-│   └── README.md               # 论文说明
-├── data/                       # 数据集
-│   └── lig_dataset_200.csv     # 200 样本数据
-├── figures/                    # 图表
-│   ├── GP_200samples_prediction.png
-│   ├── GP_200samples_residuals.png
-│   ├── GP_200samples_uncertainty.png
-│   └── GP_performance_comparison.png
-├── models/                     # 预训练模型
-│   ├── LIG_GP_200samples.pkl
-│   ├── LIG_GP_scaler_X.pkl
-│   ├── LIG_GP_scaler_y.pkl
-│   └── LIG_GP_200samples_config.json
-├── scripts/                    # 代码
-│   ├── gp_retrain_200samples.py
-│   ├── gp_run.py
-│   └── run-gp-200.ps1
-└── README.md                   # 本文件
-```
+鈹溾攢鈹€ paper/                      # 璁烘枃鏂囦欢
+鈹?  鈹溾攢鈹€ 00_abstract.md          # 鎽樿
+鈹?  鈹溾攢鈹€ 01_introduction.md      # 寮曡█
+鈹?  鈹溾攢鈹€ 02_related_work.md      # 鐩稿叧宸ヤ綔
+鈹?  鈹溾攢鈹€ 03_methods.md           # 鏂规硶
+鈹?  鈹溾攢鈹€ 04_results.md           # 缁撴灉涓庤璁?鈹?  鈹溾攢鈹€ 05_conclusion.md        # 缁撹
+鈹?  鈹溾攢鈹€ references.md           # 鍙傝€冩枃鐚?鈹?  鈹溾攢鈹€ references_formatted.bib # BibTeX 鏍煎紡
+鈹?  鈹溾攢鈹€ cover_letter.md         # 鎶曠淇?鈹?  鈹溾攢鈹€ journal_selection.md    # 鏈熷垔閫夋嫨
+鈹?  鈹溾攢鈹€ submission_checklist.md # 鎶曠娓呭崟
+鈹?  鈹溾攢鈹€ highlights.md           # Highlights
+鈹?  鈹斺攢鈹€ README.md               # 璁烘枃璇存槑
+鈹溾攢鈹€ data/                       # 鏁版嵁闆?鈹?  鈹斺攢鈹€ lig_dataset_200.csv     # 200 鏍锋湰鏁版嵁
+鈹溾攢鈹€ figures/                    # 鍥捐〃
+鈹?  鈹溾攢鈹€ GP_200samples_prediction.png
+鈹?  鈹溾攢鈹€ GP_200samples_residuals.png
+鈹?  鈹溾攢鈹€ GP_200samples_uncertainty.png
+鈹?  鈹斺攢鈹€ GP_performance_comparison.png
+鈹溾攢鈹€ models/                     # 棰勮缁冩ā鍨?鈹?  鈹溾攢鈹€ LIG_GP_200samples.pkl
+鈹?  鈹溾攢鈹€ LIG_GP_scaler_X.pkl
+鈹?  鈹溾攢鈹€ LIG_GP_scaler_y.pkl
+鈹?  鈹斺攢鈹€ LIG_GP_200samples_config.json
+鈹溾攢鈹€ scripts/                    # 浠ｇ爜
+鈹?  鈹溾攢鈹€ gp_retrain_200samples.py
+鈹?  鈹溾攢鈹€ gp_run.py
+鈹?  鈹斺攢鈹€ run-gp-200.ps1
+鈹斺攢鈹€ README.md                   # 鏈枃浠?```
 
 ---
 
-## 🚀 快速开始
-
-### 1. 安装依赖
+## 馃殌 蹇€熷紑濮?
+### 1. 瀹夎渚濊禆
 
 ```bash
 pip install scikit-learn pandas numpy matplotlib
 ```
 
-### 2. 运行预测
+### 2. 杩愯棰勬祴
 
 ```bash
 cd 11-research
 py scripts/gp_run.py
 ```
 
-### 3. 加载预训练模型
-
+### 3. 鍔犺浇棰勮缁冩ā鍨?
 ```python
 import joblib
 import numpy as np
 
-# 加载模型
+# 鍔犺浇妯″瀷
 model = joblib.load('models/LIG_GP_200samples.pkl')
 scaler_X = joblib.load('models/LIG_GP_scaler_X.pkl')
 scaler_y = joblib.load('models/LIG_GP_scaler_y.pkl')
 
-# 预测
+# 棰勬祴
 X_new = np.array([[10.0, 50.0, 1.0]])  # E_Jcm2, v_mms, co_ratio
 X_scaled = scaler_X.transform(X_new)
 y_pred, y_std = model.predict(X_scaled, return_std=True)
 y_pred_orig = scaler_y.inverse_transform(y_pred.reshape(-1, 1)).flatten()
 
-print(f"预测电导率：{y_pred_orig[0]:.1f} S/m ± {y_std[0] * scaler_y.scale_[0]:.1f} S/m")
+print(f"棰勬祴鐢靛鐜囷細{y_pred_orig[0]:.1f} S/m 卤 {y_std[0] * scaler_y.scale_[0]:.1f} S/m")
 ```
 
 ---
 
-## 📊 数据集
+## 馃搳 鏁版嵁闆?
+**鏂囦欢:** `data/lig_dataset_200.csv`
 
-**文件:** `data/lig_dataset_200.csv`
-
-| 列名 | 说明 | 单位 | 范围 |
+| 鍒楀悕 | 璇存槑 | 鍗曚綅 | 鑼冨洿 |
 |------|------|------|------|
-| E_Jcm2 | 激光能量密度 | J/cm² | 0.5 - 50 |
-| v_mms | 扫描速度 | mm/s | 10 - 500 |
-| co_ratio | CO₂ 激光比例 | - | 0 - 1 |
-| sigma_Sm | 电导率 | S/m | 120 - 48,500 |
+| E_Jcm2 | 婵€鍏夎兘閲忓瘑搴?| J/cm虏 | 0.5 - 50 |
+| v_mms | 鎵弿閫熷害 | mm/s | 10 - 500 |
+| co_ratio | CO鈧?婵€鍏夋瘮渚?| - | 0 - 1 |
+| sigma_Sm | 鐢靛鐜?| S/m | 120 - 48,500 |
 
-**数据来源:** 15 篇文献，200 个独立数据点
+**鏁版嵁鏉ユ簮:** 15 绡囨枃鐚紝200 涓嫭绔嬫暟鎹偣
 
 ---
 
-## 📈 模型性能
+## 馃搱 妯″瀷鎬ц兘
 
-### 测试结果 (测试集 40 样本)
+### 娴嬭瘯缁撴灉 (娴嬭瘯闆?40 鏍锋湰)
 
-| 指标 | GP (200 样本) | GP+ 在线学习 (203 样本) |
+| 鎸囨爣 | GP (200 鏍锋湰) | GP+ 鍦ㄧ嚎瀛︿範 (203 鏍锋湰) |
 |------|---------------|------------------------|
-| R² | 0.773 | **0.801** |
+| R虏 | 0.773 | **0.801** |
 | MAE | 506.4 S/m | **459 S/m** |
 | RMSE | 684.6 S/m | 612.3 S/m |
 | NRMSE | 40.7% | 36.5% |
-| 95% CI 覆盖率 | 100% | 100% |
+| 95% CI 瑕嗙洊鐜?| 100% | 100% |
 
-### 与基准模型对比
-
-| 模型 | R² | MAE (S/m) | RMSE (S/m) |
+### 涓庡熀鍑嗘ā鍨嬪姣?
+| 妯″瀷 | R虏 | MAE (S/m) | RMSE (S/m) |
 |------|-----|-----------|-----------|
-| **GP (本研究)** | **0.773** | **506.4** | **684.6** |
-| 随机森林 | 0.745 | 548.2 | 721.3 |
+| **GP (鏈爺绌?** | **0.773** | **506.4** | **684.6** |
+| 闅忔満妫灄 | 0.745 | 548.2 | 721.3 |
 | SVR (RBF) | 0.721 | 582.1 | 768.9 |
-| 线性回归 | 0.512 | 892.5 | 1124.7 |
+| 绾挎€у洖褰?| 0.512 | 892.5 | 1124.7 |
 
 ---
 
-## 🔬 关键发现
+## 馃敩 鍏抽敭鍙戠幇
 
-1. **激光能量密度是最关键特征** (r = 0.68)
-2. **扫描速度呈负相关** (r = -0.44)
-3. **CO₂ 比例影响较弱** (r = 0.23)
-4. **工艺 - 性能关系高度非线性** (线性模型 R² 仅 0.512)
-
----
-
-## 📮 投稿信息
-
-**目标期刊:** Carbon (IF = 11.3, Q1)
-
-**投稿状态:**
-- ✅ 论文初稿完成
-- ✅ 投稿信准备
-- ✅ 参考文献格式化 (Carbon 标准)
-- ✅ 高分辨率图表导出 (全部 300 DPI)
-- ✅ 图表完整性检查 (6 个图表)
-- ⬜ GitHub 仓库公开
-- ⬜ Zenodo DOI 申请
-- ⬜ 最终提交
-
-**计划提交日期:** 2026-03-15
+1. **婵€鍏夎兘閲忓瘑搴︽槸鏈€鍏抽敭鐗瑰緛** (r = 0.68)
+2. **鎵弿閫熷害鍛堣礋鐩稿叧** (r = -0.44)
+3. **CO鈧?姣斾緥褰卞搷杈冨急** (r = 0.23)
+4. **宸ヨ壓 - 鎬ц兘鍏崇郴楂樺害闈炵嚎鎬?* (绾挎€фā鍨?R虏 浠?0.512)
 
 ---
 
-## 🔗 相关链接
+## 馃摦 鎶曠淇℃伅
 
-- **论文目录:** `paper/`
-- **代码:** `scripts/`
-- **数据:** `data/lig_dataset_200.csv`
-- **模型:** `models/`
-- **图表:** `figures/`
+**鐩爣鏈熷垔:** Carbon (IF = 11.3, Q1)
 
----
-
-## 📧 联系
-
-**第一作者:** Claw  
-**通信作者:** [待填写]  
-**邮箱:** [待填写]
+**鎶曠鐘舵€?**
+- 鉁?璁烘枃鍒濈瀹屾垚
+- 鉁?鎶曠淇″噯澶?- 鉁?鍙傝€冩枃鐚牸寮忓寲 (Carbon 鏍囧噯)
+- 鉁?楂樺垎杈ㄧ巼鍥捐〃瀵煎嚭 (鍏ㄩ儴 300 DPI)
+- 鉁?鍥捐〃瀹屾暣鎬ф鏌?(6 涓浘琛?
+- 猬?GitHub 浠撳簱鍏紑
+- 猬?Zenodo DOI 鐢宠
+- 猬?鏈€缁堟彁浜?
+**璁″垝鎻愪氦鏃ユ湡:** 2026-03-15
 
 ---
 
-## 📄 许可证
+## 馃敆 鐩稿叧閾炬帴
 
-- **代码:** MIT License
-- **数据:** CC BY 4.0
-- **论文:** [待确定]
+- **璁烘枃鐩綍:** `paper/`
+- **浠ｇ爜:** `scripts/`
+- **鏁版嵁:** `data/lig_dataset_200.csv`
+- **妯″瀷:** `models/`
+- **鍥捐〃:** `figures/`
 
 ---
 
-*最后更新:* 2026-03-06 19:20
+## 馃摟 鑱旂郴
+
+**绗竴浣滆€?** Claw  
+**閫氫俊浣滆€?** [寰呭～鍐橾  
+**閭:** [寰呭～鍐橾
+
+---
+
+## 馃搫 璁稿彲璇?
+- **浠ｇ爜:** MIT License
+- **鏁版嵁:** CC BY 4.0
+- **璁烘枃:** [寰呯‘瀹歖
+
+---
+
+*鏈€鍚庢洿鏂?* 2026-03-06 19:20
+
+---
+
+## 馃敊 Backlinks
+
+**Documents linking here:**
+- [[HEARTBEAT]] - HEARTBEAT
+- [[15-docs\LINK_INDEX]] - LINK_INDEX
+
